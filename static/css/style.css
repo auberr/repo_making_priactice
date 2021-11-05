@@ -1,0 +1,154 @@
+
+
+*{margin: 0 auto; list-style: none; font-family: 'Noto Sans KR', sans-serif; }
+a{ text-decoration: none; }
+
+/*   레이아웃*/
+#wrap {width: 100%; background: #333;}
+header {width: 100%;}
+/*.main {width: 100%; height: 80%;  background: #777; }*/
+
+
+/*배경*/
+#wrap {position: relative; overflow: hidden;}
+#wrap > .bg {display: flex; width: 100%;}
+#wrap > .bg > img {display: flex; width: 100%;}
+
+/*헤더*/
+header {position: absolute; top: 2vw; left: 0; width: 100%;}
+header > h1 {color: #fff; text-align: center; font-size: 3.5vw; font-weight: 600; letter-spacing: -0.1vw;}
+
+/*현재시간*/
+#top_clock {height: 2vw; color: #fff; font-weight: 200; margin-bottom: 0; padding-top: 0.55vw; font-size: 0.75vw; position: absolute; top: 5.7vw; left: 7vw; opacity: 1;}
+
+/*메인상자*/
+.main {position: absolute; top: 5.7vw; width: 92.5%; height: 80%; margin-left: 4.3%;}
+
+.main_bg {display: flex; width: 100%; position: absolute;}
+
+
+/*
+.cont {position: absolute;
+    width: 75%; height: 90.5%;  padding: 7% 0% 0% 8.5%;}
+
+section {display: inline-block; width: 43.5%; height: 43%; background-color: #ccc; margin-right:5%; margin-bottom: 2%; border-radius: 1vw;}
+
+section > .cont_bg {display: flex; width: 100%;}
+*/
+
+/*컨텐츠상자*/
+.cont {position: absolute; left: 0.5vw;
+    width: 85%; height: 100%;  padding: 3.7% 1.5% 0% 6%;}
+
+.section {position: relative; display: inline-block; width: 48%; height: 49.86%; margin-bottom: -1.5%; background: #ddd;}
+
+.section > .cont_bg {display: flex; width: 103%; z-index: 10;}
+.section > h2 {display: flex; position: absolute; z-index: 20; top: 3.7vw; left: 4vw; font-size: 1.15vw; letter-spacing: -0.05vw; color: #6e7d8e;}
+
+.section > div.sec_cont {width: 76.5%; height: 63%; display: flex; position: absolute; z-index: 20; top: 6vw; left: 4vw; background: #aaa;}
+.section > div.section_bg {display: flex; position: absolute; width: 86%; height: 85.5%; background: rgba(255, 255, 255, 0.65);top: 2.6vw; left:2.3vw; border-radius: 1vw; box-shadow: 6px 12px 20px 10px rgba(17, 31, 45, 0.3);}
+
+
+/*확진자 현황*/
+.coronic_cont {width: 100%; height: 100%; overflow-x: scroll;}
+.coronic_cont::-webkit-scrollbar {
+     height: 0.3vw;}
+.coronic_cont::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10vw;
+  }
+.coronic_cont::-webkit-scrollbar-track {
+  }
+.coronic_cont > .bar_graph {position: absolute; width: 200%; height: 100%; background: #ccc;}
+
+/*위드코로나*/
+.sec_cont {overflow: hidden;}
+.withcorona_cont {width: 100%; height: 100%; background: #222; display: flex; transition: transform 0.5s;}
+.withcorona_cont > .grade_wrap {width: 100%; height: 100%; background: #222; display: flex;}
+.withcorona_cont > .grade_wrap > .grade {width: 45%; height: 100%; padding-left: 2%;}
+.withcorona_cont > .grade_wrap > .detail {width: 55%; height: 90%; background: #444;}
+
+.grade > .grade_number{font-size: 2.5vw; font-weight: 600; color: #57687c; text-align: center; background: rgba(255,255,255,0.5); margin: 20% 22% 7% 0%; padding: 18% 0; border-radius: 0.5vw;}
+.grade > .grade_title {text-align: center; font-size: 0.8vw; font-weight: 500; letter-spacing: -0.02vw; margin-right: 22%; color: #505e72;}
+
+.detail {border-left: 1px solid #fff; width: 100%; height: 100%;} 
+/*내용 길어지면 .detail에 overflow-y: scroll; 넣기*/
+.detail > dl {margin-left: 10%;}
+.detail > dl > dt {margin: 2% 2% 0 0;}
+.detail > dl > dt > span.title {display: inline-block; width: 100%; color: #505e72; font-size: 0.8vw; text-align: left; font-weight: 500; letter-spacing: -0.02vw;}
+.detail > dl >  dd {margin: 0% 2% 4%; font-size: 0.89vw; letter-spacing: -0.01vw; font-weight: 200; width: 95%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #505e72;}
+
+.fa-chevron-right {width: 1vw; color: #fff; padding-top: %; cursor: pointer;}
+
+/*버튼*/
+.slide_btn {position: absolute; top: 95%; width: 100%; height: 5%; display: flex; padding: 0 42% 0 42%;}
+.slide_btn > div {width: 15%; height: 100%; background: #bfc3E0; border-radius: 100%;}
+
+.slide_btn > div.btn_active {background: #98a1cc;}
+
+
+/*백신접종률*/
+.vaccine_cont {}
+.vaccine_cont > .vacont_wrap {width: 100%; height: 100%; background: #111; display: flex;}
+
+.vacont_wrap > .circle {width: 50%; height: 100%; background: #ddd;}
+.vacont_wrap > .percent {width: 50%; height: 100%; background: #444; text-align: center;}
+.percent > p {margin-top: 15%; font-size: 3.1vw; font-weight: 600; letter-spacing: -0.2vw; color: #57687c;}
+.percent > span {font-size: 1vw; font-weight: 600; letter-spacing: -0.08vw; color: #57687c;}
+
+/*선별진료소*/
+.hospital_cont {width: 100%; height: 100%; display: flex;}
+.hospital_cont > .hospital_wrap {width: 70%; overflow-y: scroll;}
+.hospital_cont > .go_vaccine_site {width: 30%;}
+
+.hospital_wrap::-webkit-scrollbar {
+    width: 0.25vw;}
+.hospital_wrap::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 10vw;
+  }
+.hospital_wrap::-webkit-scrollbar-track {
+  }
+
+.hospital_wrap > dl {margin-left: 0;}
+.hospital_wrap > dl > dt {margin: 2% 2% 0 0;}
+.hospital_wrap > dl > dt > span.hostpital_name {display: inline-block; width: 50%; color: #505e72; font-size: 0.85vw; text-align: left; font-weight: 600; letter-spacing: -0.02vw;}
+.hospital_wrap > dl > dt > span.call {display: inline-block; width: 40%; color: #505e72; font-size: 0.7vw; text-align: left; font-weight: 400; letter-spacing: -0.02vw;}
+.hospital_wrap > dl >  dd {margin: 0% 2% 4%; font-size: 0.89vw; letter-spacing: -0.01vw; font-weight: 200; width: 95%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #505e72;} 
+
+.go_vaccine_site > p {margin-top: 50%; font-size: 1.2vw; font-weight: 600; letter-spacing: -0.1vw; color: #57687c; text-align: center;}
+.go_vaccine_site > p > a {color: #57687c;}
+
+/*지역메뉴*/
+nav {position: absolute; right: 6vw;
+    width: 11%; height: 92.2%; margin-top: 4.3%;
+    border-left: 1px solid #fff; overflow-y: scroll;
+}
+nav::-webkit-scrollbar {
+    width: 0.4vw;}
+nav::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 10vw;
+  }
+nav::-webkit-scrollbar-track {
+  }
+
+nav > ul {width: 100%; padding: 0;}
+nav > ul > li {width: 100%; text-align: center; font-size: 1vw; font-weight: 200; padding-top: 0.7vw; }
+nav > ul > li:after {
+  content: "";
+  display: block; margin: 0 auto;
+  width: 80%;
+  border-bottom: 1px solid #fff;
+    padding-bottom: 0.7vw;
+}
+nav > ul > li > a {color: #fff;}
+nav > ul > li > a:hover {color: #616f91;}
+nav > ul > li:hover {background-color: rgba(255, 255, 255, 0.3); font-weight: 500;}
+
+
+
+/*그래프*/
+#mychart1 {margin-left: 0; width: 100%; height: 100%;}
+#mychart2 {margin-left: 0; width: 50%; height: 100%;}
+
